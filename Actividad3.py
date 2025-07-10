@@ -6,7 +6,7 @@ class Recepcion:
     def agregar_paciente(self,nombre):
         self.cola_pacientes.append(nombre)
         print(f"Paciente {nombre} agregado")
-    def atender_paciente(self,nombre):
+    def atender_paciente(self, nombre, paciente=None):
         if self.cola_pacientes:
             self.cola_pacientes.popleft()
             print(f"Paciente {nombre} atendido")
@@ -19,5 +19,5 @@ class Recepcion:
             print("Pacientes en espera")
             for paciente in self.cola_pacientes:
                 print (f"- {paciente}")
-        else
+        else:
             print("No hay pacientes en cola")
